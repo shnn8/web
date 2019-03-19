@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the TR Logic LLC technical task !</h1/>
+    {% if user.is_authenticated %}
+        <h2>Hello dear {{ user.username }}!<h2>
+    {% else %}
+        <h2>Register or Login if you'd like to</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
