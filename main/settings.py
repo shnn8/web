@@ -17,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'main',
 ]
 
@@ -65,7 +64,6 @@ AUTH_PASSWORD_VALIDATORS = [
     { 'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator' },
     { 'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator' },
 ]
-
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True

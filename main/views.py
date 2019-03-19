@@ -13,6 +13,14 @@ def special(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
+@login_required
+def view_profile(request, pk=None):
+    if pk:
+        user = User.objects.get(pk=pk)
+    else:
+        user = request.user
+    args = {'user': user}
+    return render(request, 'main/user.profile.html', args)
 
 def register(request):
     registered = False

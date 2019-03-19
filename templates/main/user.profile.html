@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+{% block body_block %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Is it you, {{ user.first_name }}?</h1/>
+        <h2>Username: {{ user.username }}<h2>
+        <h2>Email: {{ user.email }}</h2>
+        <h2>First name: {{ user.first_name }}</h2>
+        <h2>Last name: {{ user.last_name }}</h2>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,1 @@
+django-authtools==1.6.0
